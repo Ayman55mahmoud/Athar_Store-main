@@ -65,8 +65,8 @@ const products = [
     price: 1000,
     discount: 0,
     images: [
-      "https://images.pexels.com/photos/3662357/pexels-photo-3662357.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "https://images.pexels.com/photos/14941588/pexels-photo-14941588.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+       "public/002.png",
+  "public/001 (3).png"
     ],
     sizes: ["M", "L", "XL"],
     colors: ["Cream", "Off-White"],
@@ -81,13 +81,12 @@ const products = [
     price: 1400,
     discount: 15,
     images: [
-      "https://images.pexels.com/photos/15870282/pexels-photo-15870282.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "https://images.pexels.com/photos/10106995/pexels-photo-10106995.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+      "public/003.png"
     ],
     sizes: ["S", "M", "L", "XL"],
     colors: ["White"],
     available: true,
-    newArrival: false
+    newArrival: true
   },
   {
     id: 4,
@@ -97,8 +96,8 @@ const products = [
     price: 1600,
     discount: 0,
     images: [
-      "https://images.pexels.com/photos/2897529/pexels-photo-2897529.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "https://images.pexels.com/photos/2897533/pexels-photo-2897533.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+      "public/004.png",
+  "public/004 (1).png"
     ],
     sizes: ["30", "32", "34", "36"],
     colors: ["Black", "Charcoal"],
