@@ -49,8 +49,8 @@ const products = [
     price: 900,
     discount: 20,
     images: [
-      url('public/background1.png'),
-      "https://images.pexels.com/photos/3290886/pexels-photo-3290886.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+      "public/001 (1).png",
+  "public/001 (2).png"
     ],
     sizes: ["M", "L", "XL"],
     colors: ["Black"],
