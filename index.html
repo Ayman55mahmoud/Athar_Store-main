@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ATHAR — أثر | Men's Fashion</title>
+  <meta name="description" content="ATHAR — أثر. Style that leaves an أثر. Premium men's fashion designed for presence, not noise." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@300;400;500;600;700&family=Noto+Naskh+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./style.css" />
+  <meta property="og:image" content="https://bolt.new/static/og_default.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://bolt.new/static/og_default.png">
+</head>
+<body>
+
+  <!-- ============ HEADER ============ -->
+  <header id="header" class="header">
+    <div class="header-inner">
+      <a href="#hero" class="logo" aria-label="ATHAR Home">
+        <span class="logo-ar">أثر</span>
+        <span class="logo-en">ATHAR</span>
+      </a>
+
+      <nav class="nav-desktop" aria-label="Main navigation">
+        <a href="#hero" data-nav data-i18n="nav.home">Home</a>
+        <a href="#new-arrivals" data-nav data-i18n="nav.newArrivals">New Arrivals</a>
+        <a href="#offers" data-nav data-i18n="nav.offers">Offers</a>
+        <a href="#all-products" data-nav data-i18n="nav.shopAll">Shop All</a>
+      </nav>
+
+      <div class="header-actions">
+        <button id="lang-btn" class="lang-btn" aria-label="Switch language">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+            <circle cx="12" cy="12" r="10"/>
+            <line x1="2" y1="12" x2="22" y2="12"/>
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+          </svg>
+          <span data-i18n="lang.toggle">العربية</span>
+        </button>
+        <button id="cart-btn" class="cart-btn" aria-label="Open cart">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <path d="M16 10a4 4 0 0 1-8 0"/>
+          </svg>
+          <span id="cart-count" class="cart-count">0</span>
+        </button>
+        <button id="menu-btn" class="menu-btn" aria-label="Open menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <nav id="mobile-nav" class="mobile-nav" aria-label="Mobile navigation">
+      <a href="#hero" data-nav data-i18n="nav.home">Home</a>
+      <a href="#new-arrivals" data-nav data-i18n="nav.newArrivals">New Arrivals</a>
+      <a href="#offers" data-nav data-i18n="nav.offers">Offers</a>
+      <a href="#all-products" data-nav data-i18n="nav.shopAll">Shop All</a>
+    </nav>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section id="hero" class="hero">
+    <div class="hero-image" style="background-image: url('public/background1.png')"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="hero-ar">أثر</p>
+      <h1 class="hero-title" data-i18n-html="hero.title">Style that leaves an <span>أثر</span></h1>
+      <p class="hero-subtitle" data-i18n-html="hero.subtitle">More than clothes.<br>A presence that stays.</p>
+      <p class="hero-subtitle-ar" data-i18n-html="hero.subtitleAr">مش مجرد لبس.<br>حضور بيفضل.</p>
+      <a href="#new-arrivals" class="btn-hero" data-nav data-i18n="hero.discover">Discover ATHAR</a>
+    </div>
+  </section>
+
+  <!-- ============ NEW ARRIVALS ============ -->
+  <section id="new-arrivals" class="new-arrivals">
+    <div class="section-header">
+      <p class="section-label" data-i18n="section.justIn">Just In</p>
+      <h2 class="section-title" data-i18n="section.newArrivals">New Arrivals</h2>
+    </div>
+    <div id="arrivals-grid" class="product-grid"></div>
+  </section>
+
+  <!-- ============ OFFERS ============ -->
+  <section id="offers" class="offers">
+    <div class="section-header">
+      <p class="section-label" data-i18n="section.saveNow">Save Now</p>
+      <h2 class="section-title" data-i18n="section.offers">Offers</h2>
+    </div>
+    <div id="offers-grid" class="product-grid"></div>
+  </section>
+
+  <!-- ============ ALL PRODUCTS (with search + filter) ============ -->
+  <section id="all-products" class="all-products">
+    <div class="section-header">
+      <p class="section-label" data-i18n="section.shopAll">Shop All</p>
+      <h2 class="section-title" data-i18n="section.allProducts">All Products</h2>
+    </div>
+    <div class="product-controls">
+      <div class="search-box">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+          <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+        </svg>
+        <input type="text" id="search-input" placeholder="Search products..." aria-label="Search products" data-i18n-placeholder="search.placeholder" />
+      </div>
+      <div class="filter-chips" id="filter-chips" role="tablist" aria-label="Category filters">
+        <button class="chip active" data-filter="All" role="tab" aria-selected="true" data-i18n="filter.all">All</button>
+        <button class="chip" data-filter="T-Shirts" role="tab" aria-selected="false" data-i18n="filter.tshirts">T-Shirts</button>
+        <button class="chip" data-filter="Shirts" role="tab" aria-selected="false" data-i18n="filter.shirts">Shirts</button>
+        <button class="chip" data-filter="Pants" role="tab" aria-selected="false" data-i18n="filter.pants">Pants</button>
+        <button class="chip" data-filter="Hoodies" role="tab" aria-selected="false" data-i18n="filter.hoodies">Hoodies</button>
+        <button class="chip" data-filter="Jackets" role="tab" aria-selected="false" data-i18n="filter.jackets">Jackets</button>
+        <button class="chip" data-filter="New Arrivals" role="tab" aria-selected="false" data-i18n="filter.newArrivals">New Arrivals</button>
+        <button class="chip" data-filter="Offers" role="tab" aria-selected="false" data-i18n="filter.offers">Offers</button>
+      </div>
+    </div>
+    <div id="products-grid" class="product-grid"></div>
+    <p id="no-results" class="no-results" style="display:none;" data-i18n="noResults">No products found.</p>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="logo-ar">أثر</span>
+        <span class="logo-en">ATHAR</span>
+        <p data-i18n="footer.tagline">Style that leaves an أثر.</p>
+        <p class="footer-ar" data-i18n="footer.taglineAr">ستايل يسيب أثر.</p>
+      </div>
+      <div class="footer-links">
+        <a href="#new-arrivals" data-nav data-i18n="nav.newArrivals">New Arrivals</a>
+        <a href="#offers" data-nav data-i18n="nav.offers">Offers</a>
+        <a href="#all-products" data-nav data-i18n="nav.shopAll">Shop All</a>
+      </div>
+      <div class="footer-contact">
+        <a href="https://wa.me/201014007217" target="_blank" rel="noopener" class="btn-whatsapp-footer">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.149-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.149-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.71.306 1.263.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+          </svg>
+          <span data-i18n="footer.whatsapp">WhatsApp: 01014007217</span>
+        </a>
+        <div class="social-links">
+          <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook" class="social-link">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+            </svg>
+          </a>
+          <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram" class="social-link">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.012-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+            </svg>
+          </a>
+          <a href="https://tiktok.com" target="_blank" rel="noopener" aria-label="TikTok" class="social-link">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.57-5.73-.04-.56-.03-1.12-.01-1.67.15-2.1 1.27-4.1 2.93-5.4 1.43-1.13 3.29-1.72 5.12-1.51.02 1.48-.01 2.97.02 4.45-.83-.27-1.78-.18-2.51.34-.71.49-1.13 1.35-1.07 2.22-.04 1.04.74 2.01 1.72 2.3 1.01.33 2.2.05 2.87-.81.43-.55.58-1.26.55-1.95.01-4.22-.01-8.43.02-12.65z"/>
+            </svg>
+          </a>
+        </div>
+        <p data-i18n="footer.copyright">&copy; 2026 ATHAR — أثر. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============ CART DRAWER ============ -->
+  <div id="cart-overlay" class="overlay" aria-hidden="true"></div>
+  <aside id="cart-drawer" class="cart-drawer" aria-label="Shopping cart" aria-hidden="true">
+    <div class="drawer-header">
+      <h2 data-i18n="cart.title">Your Order</h2>
+      <button id="cart-close" class="close-btn" aria-label="Close cart">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <div id="cart-items" class="cart-items"></div>
+    <div id="cart-empty" class="cart-empty">
+      <p data-i18n="cart.empty">Your order is empty.</p>
+    </div>
+    <div id="cart-summary" class="cart-summary" style="display:none;">
+      <div class="summary-row"><span data-i18n="cart.originalSubtotal">Original Subtotal</span><span id="cart-subtotal">0 EGP</span></div>
+      <div class="summary-row discount"><span data-i18n="cart.totalDiscount">Total Discount</span><span id="cart-discount">0 EGP</span></div>
+      <div class="summary-row total"><span data-i18n="cart.finalTotal">Final Total</span><span id="cart-total">0 EGP</span></div>
+      <button id="checkout-btn" class="btn-whatsapp">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.149-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.149-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.71.306 1.263.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+          </svg>
+          <span data-i18n="cart.checkout">Proceed to Checkout</span>
+        </button>
+      <button id="clear-cart-btn" class="btn-text" data-i18n="cart.clear">Clear Cart</button>
+    </div>
+  </aside>
+
+  <!-- ============ PRODUCT MODAL ============ -->
+  <div id="product-overlay" class="overlay" aria-hidden="true"></div>
+  <div id="product-modal" class="product-modal" aria-hidden="true" role="dialog" aria-label="Product details">
+    <button id="product-close" class="close-btn modal-close" aria-label="Close product">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <div id="product-modal-content"></div>
+  </div>
+
+  <!-- ============ CHECKOUT MODAL ============ -->
+  <div id="checkout-overlay" class="overlay" aria-hidden="true"></div>
+  <div id="checkout-modal" class="checkout-modal" aria-hidden="true" role="dialog" aria-label="Checkout">
+    <button id="checkout-close" class="close-btn modal-close" aria-label="Close checkout">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <div id="checkout-content"></div>
+  </div>
+
+  <script src="./products.js"></script>
+  <script src="./script.js"></script>
+</body>
+</html>
